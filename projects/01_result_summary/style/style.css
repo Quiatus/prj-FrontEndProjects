@@ -66,20 +66,24 @@ body {
     color: var(--cls-light-lavender-a)
 }
 
+.text-gb {
+    color: var(--cls-gray-blue)
+}
+
 .text-s {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .text-m {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .text-l {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .text-xl {
-    font-size: 64px;
+    font-size: 50px;
 }
 
 .text-nm {
@@ -96,6 +100,11 @@ body {
 
 .text-cen {
     text-align: center;
+}
+
+.text-left {
+    width: 100%;
+    text-align: left;
 }
 
 .p-space {
@@ -120,8 +129,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 3rem 2rem;
+    gap: 1.5rem;
+    padding: 2rem;
     margin-bottom: 2rem;
     background: linear-gradient(var(--cls-grad-start), var(--cls-grad-end));
     border-bottom-left-radius: 2rem;
@@ -129,15 +138,36 @@ body {
 }
 
 .summary {
-    padding: 3rem 2rem;
+    padding: 0 2rem;
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
+button {
+    width: 100%;
+    height: 54px;
+    background-color: var(--cls-gray-blue);
+    color: var(--cls-white);
+    font-family: inherit;
+    font-size: 16px;
+    border: none;
+    border-radius: 2rem;
+}
+
+button:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+button:active {
+    background: linear-gradient(var(--cls-grad-start), var(--cls-grad-end));
 }
 
 .score {
     background: linear-gradient(var(--cls-circ-start), var(--cls-circ-end));
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -146,6 +176,22 @@ body {
 }
 
 @media only screen and (min-width: 750px) {
+    .text-s {
+        font-size: 18px;
+    }
+    
+    .text-m {
+        font-size: 22px;
+    }
+    
+    .text-l {
+        font-size: 32px;
+    }
+    
+    .text-xl {
+        font-size: 64px;
+    }
+
     .background-first {
         display: flex;
         flex-direction: row;
@@ -159,19 +205,27 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
+        /* align-items: center; */
         border-radius: 2rem;
         box-shadow: 10px 10px 50px 0px var(--cls-light-lavender-a);
     }
 
+    .score {
+        width: 200px;
+        height: 200px;
+    }
+
     .header {
         width: 375px;
+        gap: 2rem;
         margin-bottom: 0;
         border-radius: 2rem;
     }
 
     .summary {
         width: 375px;
+        padding: 2rem;
+        gap: 2rem;
     }
 }
 
