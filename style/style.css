@@ -9,11 +9,16 @@
 html {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aliceblue;
 }
 
 header {
     width: 100vw;
-    background: linear-gradient(#FFF, #EEF);
+    background: linear-gradient(aliceblue, #DDF);
     padding: 2rem 0;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -37,26 +42,23 @@ main {
 }
 
 .project-box {
-    background-color: #EEF;
+    background-color: #DDF;
     border-radius: 1rem;
     padding: 1rem;
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+}
+
+.project-box h3 {
+    color: indigo;
 }
 
 .project-box h3, 
 .project-box p {
     margin-bottom: 0.5rem;
-}
-
-.projectPicture {
-    width: 50%;
-}
-
-.projectText {
-    width: 50%;
 }
 
 img {
@@ -78,34 +80,37 @@ a:hover {
 
 @media only screen and (min-width: 480px) {
     header h1 {
-        font-size: 2rem;
-    }
-
-    main h3 {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 
     main {
         margin: auto 1rem;
     }
+
+    .project-box {
+        flex-direction: row;
+    }
+
+    .projectPicture {
+        width: 50%;
+    }
+    
+    .projectText {
+        width: 50%;
+    }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1232px) {
 
     header {
         margin: 0 auto 1rem;
-        max-width: 1024px;
+        max-width: 1200px;
     }
 
     main {
         margin: 0 auto 1rem;
-        max-width: 1024px;
+        max-width: 1200px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
-
-    header h1 {
-        font-size: 3rem;
-        text-shadow: 0 0 2px indigo;
     }
 }
