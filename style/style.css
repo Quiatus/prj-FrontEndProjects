@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,5 +7,105 @@
 }
 
 html {
-    font-family: system-ui;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+header {
+    width: 100vw;
+    background: linear-gradient(#FFF, #EEF);
+    padding: 2rem 0;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+header h1 {
+    text-align: center;
+    color: indigo;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 2px indigo;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: auto 1rem;
+}
+
+.project-box {
+    background-color: #EEF;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.project-box h3, 
+.project-box p {
+    margin-bottom: 0.5rem;
+}
+
+.projectPicture {
+    width: 50%;
+}
+
+.projectText {
+    width: 50%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+a, a:visited {
+    color: indigo;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+@media only screen and (min-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main h3 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: auto 1rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    header {
+        margin: 0 auto 1rem;
+        max-width: 1024px;
+    }
+
+    main {
+        margin: 0 auto 1rem;
+        max-width: 1024px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        text-shadow: 0 0 2px indigo;
+    }
 }
