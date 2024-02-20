@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cls-white: hsl(0, 0%, 100%);
+    --cls-lightpink: hsl(275, 100%, 97%);
+    --cls-lightpurple: hsl(292, 16%, 49%);
+    --cls-purple: hsl(281, 83%, 54%);
+    --cls-darkpurple: hsl(292, 42%, 14%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-family: "Work Sans", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../media/background-pattern-mobile.svg') no-repeat top center;
+    background-color: var(--cls-lightpink);
+}
+
+main {
+    width: clamp(325px, 90vw, 600px);
+    background-color: var(--cls-white);
+    border-radius: 16px;
+    color: var(--cls-darkpurple);
+    padding: 24px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px; 
+    margin-bottom: 24px;
+}
+
+img {
+    width: 24px;
+    height: auto;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--cls-lightpink);
+    margin: 24px 0;
+}
+
+.text-question {
+    font-weight: 600;
+    font-size: 16px;
+    width: clamp(80%, 85%, 90%);
+}
+
+.text-question:hover, 
+.text-question:focus {
+    color: var(--cls-purple);
+    cursor: pointer;    
+}
+
+.text-answer {
+    color: var(--cls-lightpurple);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.answer {
+    margin-top: 24px;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    width: 30px;
+    height: 31px;
+    border: none;
+}
+
+.btn-expand {
+    background: url('../media/icon-plus.svg');
+}
+
+.btn-collapse {
+    background: url('../media/icon-minus.svg');
+}
+
+@media only screen and (min-width: 375px) {
+    body {
+        background: url('../media/background-pattern-desktop.svg') no-repeat top center;
+        background-color: var(--cls-lightpink);
+    }
+
+    img {
+        width: 34px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .text-answer {
+        font-size: 16px;
+    }
+
+    .text-question {
+        font-size: 18px;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        background: url('../media/background-pattern-desktop.svg') top no-repeat;
+        background-size: 100% auto; 
+        background-color: var(--cls-lightpink);
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/main.js" defer></script>
+    <link rel="shortcut icon" href="media/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+    <!--
+
+    Users should be able to:
+
+    - Hide/Show the answer to a question when the question is clicked
+    - Navigate the questions and hide/show answers using keyboard navigation alone
+    - View the optimal layout for the interface depending on their device's screen size
+    - See hover and focus states for all interactive elements on the page
+     -->
+
+     <main>
+        <section class="header">
+            <img src="media/icon-star.svg" alt=""><h1>FAQs</h1>
+        </section>
+
+        <section class="question">
+            <span class="text-question" tabindex="1">What is Frontend Mentor, and how will it help me?</span>
+            <button class="btn btn-collapse" tabindex="2"></button>
+        </section>
+        <section class="answer visible">
+            <p class="text-answer">
+                Frontend Mentor offers realistic coding challenges to help developers improve their frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for all levels and ideal for portfolio building. 
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="question">
+            <span class="text-question" tabindex="3">Is Frontend Mentor free?</span>
+            <button class="btn btn-expand" tabindex="4"></button>
+        </section>
+        <section class="answer hidden">
+            <p class="text-answer">
+                Yes, Frontend Mentor offers both free and premium coding challenges, with the free option providing access to a range of projects suitable for all skill levels.
+            </p>
+        </section>
+        
+        <hr>
+
+        <section class="question">
+            <span class="text-question" tabindex="5">Can I use Frontend Mentor projects in my portfolio?</span>
+            <button class="btn btn-expand" tabindex="6"></button>
+        </section>
+        <section class="answer hidden">
+            <p class="text-answer">
+                Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent way to showcase your skills to potential employers! 
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="question">
+            <span class="text-question" tabindex="7">How can I get help if I'm stuck on a challenge?</span>
+            <button class="btn btn-expand" tabindex="8"></button>
+        </section>
+        <section class="answer hidden">
+            <p class="text-answer">
+                The best place to get help is inside Frontend Mentor's Discord community. There's a help channel where you can ask questions and seek support from other community members. 
+            </p>
+        </section>
+     </main>
+    
+</body>
+</html>
