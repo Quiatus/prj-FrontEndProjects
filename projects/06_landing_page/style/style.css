@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /* Colors */
+
+    --cls-blue: #24053E;
+    --cls-green: #44FFA1;
+    --cls-grey: #584D62;
+    --cls-light: #FCF8FF;
+    --cls-white: #FFF;
+
+    /* Fonts */
+
+    --font-headerL: 600 80px "Fraunces", serif; /* Line spacing 80px */
+    --font-headerM: 600 56px "Fraunces", serif; /* Line spacing 56px */
+    --font-headerS: 600 32px "Fraunces", serif; /* Line spacing 40px */
+    --font-main: 18px/32px "Manrope", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
