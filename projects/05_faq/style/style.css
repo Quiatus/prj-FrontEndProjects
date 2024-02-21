@@ -74,8 +74,8 @@ hr {
     width: clamp(80%, 85%, 90%);
 }
 
-.text-question:hover, 
-.text-question:focus {
+.text-question:hover,
+.text-question:focus-visible {
     color: var(--cls-purple);
     cursor: pointer;    
 }
@@ -102,11 +102,15 @@ hr {
     width: 30px;
     height: 31px;
     border: none;
-}
-
-.btn-expand {
+    transition: all 0.15s;
     background: url('../media/icon-plus.svg');
 }
+
+.btn:hover, 
+.btn:focus-visible {
+    transform: scale(1.25);
+    cursor: pointer;
+}  
 
 .btn-collapse {
     background: url('../media/icon-minus.svg');
