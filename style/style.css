@@ -8,8 +8,9 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
+
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -38,7 +39,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin: auto 1rem;
+    margin: 1rem;
 }
 
 .project-box {
