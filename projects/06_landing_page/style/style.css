@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .header {
@@ -30,10 +31,21 @@
     flex-direction: column;
     justify-content: center;
     padding: 2rem clamp(1rem, 10vw, 25%) 0;
-    border-bottom-left-radius: 100% 10%;
-    border-bottom-right-radius: 100% 10%;
+    
 }
 
+.img-container::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: clamp(110px, 10vh, 320px);
+    background-color: var(--cls-blue);
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scaleX(2);
+    
+} 
 
 .header-logo {
     display: flex;
