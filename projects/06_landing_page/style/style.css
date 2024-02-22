@@ -11,10 +11,10 @@
 
     /* Fonts */
 
-    --font-headerL: 600 80px "Fraunces", serif; /* Line spacing 80px */
+    --font-headerL: 600 clamp(40px, 10vw, 80px) "Fraunces", serif; /* Line spacing 80px */
     --font-headerM: 600 56px "Fraunces", serif; /* Line spacing 56px */
-    --font-headerS: 600 32px "Fraunces", serif; /* Line spacing 40px */
-    --font-main: 18px/32px "Manrope", sans-serif;
+    --font-headerS: 600 clamp(28px, 30px, 32px) "Fraunces", serif; /* Line spacing 40px */
+    --font-main: clamp(16px, 2vw, 18px)/32px "Manrope", sans-serif;
 }
 
 * {
@@ -22,3 +22,197 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.header {
+    width: 100vw;
+    background-color: var(--cls-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem clamp(1rem, 10vw, 25%) 0;
+    border-bottom-left-radius: 100% 10%;
+    border-bottom-right-radius: 100% 10%;
+}
+
+
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.header-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.header-img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-img img {
+    width: clamp(320px, 100%, 800px);
+    height: auto;
+    display: block;
+} 
+
+h1 {
+    font: var(--font-headerL);
+    color: var(--cls-white);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font: var(--font-headerS);
+    text-align: center;
+}
+
+span {
+    white-space: nowrap;
+}
+
+button {
+    width: 150px;
+    height: 60px;
+    background-color: var(--cls-green);
+    color: var(--cls-blue);
+    border: none;
+    font: var(--font-main);
+    font-weight: 700;
+}
+
+button:hover, 
+button:focus-visible {
+    background-color: var(--cls-blue);
+    color: var(--cls-green);
+    border: 2px solid var(--cls-green);
+    cursor: pointer;
+    outline: none;
+}
+
+a, 
+a:visited {
+    color: white;
+    font: var(--font-main);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 3px solid var(--cls-green);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--cls-green);
+    cursor: pointer;
+}
+
+.underlined {
+    border-bottom: 3px solid var(--cls-green);
+}
+
+#line1::after{
+    content: "\a";
+    white-space: pre;
+}
+
+/* .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cls-light);
+    color: var(--cls-blue);
+    padding: clamp(20%, 25%, 30%) clamp(1rem, 10vw , 20%);
+    
+}
+
+.round-text {
+    border: 1px solid var(--cls-blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    font: 600 22px "Fraunces", serif;
+}
+
+.bp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 2rem;
+}
+
+.bp p {
+    font: var(--font-main);
+    text-align: center;
+}
+
+.bp:last-of-type {
+    margin-bottom: 0;
+}
+
+.about {
+    padding: clamp(20%, 25%, 30%) clamp(1rem, 10vw , 20%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+
+}
+
+.profile-picture img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.bio {
+    background-color: var(--cls-blue);
+    color: var(--cls-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    position: absolute;
+    top: 70%;
+    margin: 0 1rem;
+}
+
+.bio p {
+    font: var(--font-main);
+    text-align: center;
+} */
+
+/* @media only screen and (min-width: 700px) {
+    .header-img {
+        top: 60%
+    }
+    
+} */
+
+
