@@ -18,10 +18,4 @@ btnCircle.forEach(btn => {btn.addEventListener('click', () => {
     btn.classList.add('selected')
 })})
 
-btnSubmit.addEventListener('click', () => {
-    if (rating) {
-        switchToResult()
-    } else {
-        alert('Please choose rating')
-    }
-})
+btnSubmit.addEventListener('click', () => { rating ? switchToResult() : alert('Please select rating before submitting') })
