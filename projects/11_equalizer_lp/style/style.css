@@ -13,7 +13,7 @@
 
     /* Font */
 
-    --font-h1: 700 clamp(40px, 10vw, 88px)/clamp(40px, 100%, 88px) "IBM Plex Sans", sans-serif;
+    --font-h1: 700 clamp(40px, 8vw, 88px)/clamp(40px, 100%, 88px) "IBM Plex Sans", sans-serif;
     --font-h2: 700 clamp(32px, 10vw, 40px)/48px "IBM Plex Sans", sans-serif;
     --font-bh: 500 clamp(16px, 3vw, 20px)/34px "IBM Plex Sans", sans-serif;
     --font-bm: 400 clamp(18px, 3vw, 20px)/30px "IBM Plex Sans", sans-serif;
@@ -29,10 +29,9 @@
 }
 
 html {
+    overflow-x: hidden;
     width: 100vw;
-    overflow-x:hidden;
 }
-
 
 main {
     display: flex;
@@ -40,6 +39,9 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: var(--clr-white);
 }
 
 .main-background {
@@ -47,10 +49,18 @@ main {
     content: url('../media/bg-main-mobile.png');
     max-width: 582px;
     max-height: 780px;
-    top: -30%;
-    left: 10%;
-    z-index: -1;
+    top: -15%;
+    left: 0%;
+    z-index: 0;
 } 
+
+.logo-right {
+    position: absolute;
+    width: 266px;
+    height: auto;
+    top: -50px;
+    left: 700px;
+}
 
 /* Header */
 
@@ -78,8 +88,8 @@ main {
 }
 
 .header-content {
-    margin-bottom: 40%;
-    padding: 2rem 10% 0;
+    margin-bottom: 15rem;
+    padding: 2rem 5% 0;
 }
 
 /* Main */
@@ -88,7 +98,7 @@ main {
     background-color: var(--clr-black);
     position: relative;
     border-radius: 1rem;
-    width: 100%;
+    max-width: 375px;
     display: flex;
     justify-content: center;
     margin-bottom: 37rem;
@@ -102,7 +112,7 @@ main {
 }
 
 .img-phone {
-    max-width: clamp(208px, 50%, 280px);
+    max-width: clamp(208px, 60%, 270px);
     height: auto;
     display: block;
     position: absolute;
@@ -114,14 +124,14 @@ main {
     color: var(--clr-white);
     border-radius: 1rem;
     position: absolute;
-    left: 0;
+    left: auto;
     top: 90%;
-    padding: 3rem 10%;
+    padding: 3rem 2rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
-    max-width: clamp(375px, 100%, 446px);
+    width: clamp(260px, 100%, 375px);
 }
 
 .buttons {
@@ -163,7 +173,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 2rem ;
-    padding: 0 10%;
+    padding: 0 5% 3rem;
     color: var(--clr-black);
     font: var(--font-bf);
 }
@@ -176,6 +186,7 @@ main {
 .sm-icons {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -187,7 +198,7 @@ main {
 /* Buttons */
 
 .btn {
-    width: clamp(296px, 100%, 333px);
+    width: clamp(200px, 100%, 333px);
     height: 61px;
     border-radius: 0.75rem;
     font: var(--font-btn);
@@ -227,4 +238,133 @@ main {
 .btn-android:focus-visible {
     background-color: var(--clr-gold);
     cursor: pointer;
+}
+
+/* media queries */
+
+@media (max-width: 300px) {
+    .header__text > h1 {
+        font-size: 32px;
+    }
+
+    .img-phone {
+        width: 50%;
+    }
+
+    .main-content {
+        margin-bottom: 40rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__text > h1 {
+        width: 65%;
+    }
+
+    .header__text > p {
+        width: 90%;
+    }
+
+    .main-content {
+        width: 90%;
+        max-width: 90%;
+        margin-bottom: 20rem;
+    }
+
+    .main-background {
+        position: absolute;
+        content: url('../media/bg-main-tablet.png');
+        max-width: 1283px;
+        max-height: 1108px;
+        top: -15%;
+        left: -35%;
+    } 
+
+    .img-phone {
+        left: 10%;
+    }
+
+    .info {
+        right: 10%;
+        top: 20%;
+    }
+
+    .logo-right {
+        left: 70%;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tr {
+        grid-area: 2/1;
+    }
+
+    .sm-icons {
+        grid-area: 2/2;
+        justify-content: end;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .header__text > h1 {
+        width: 60%;
+    }
+
+    .header__text > p {
+        width: 60%;
+    }
+
+    .header-content {
+        margin-bottom: 15rem;
+        padding: 2rem 10% 0;
+    }
+
+    .main-content {
+        width: 80%;
+        max-width: 80%;
+        margin-bottom: 20rem;
+    }
+
+    .main-background {
+        position: absolute;
+        content: url('../media/bg-main-desktop.png');
+        max-width: 1913px;
+        max-height: 2058px;
+        top: -15%;
+        left: 0;
+    } 
+
+    .img-phone {
+        left: 10%;
+    }
+
+    .info {
+        right: 10%;
+        top: 20%;
+    }
+
+    .logo-right {
+        width: 312px;
+        height: auto;
+        top: -50px;
+        left: 70%;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 10% 3rem;
+    }
+
+    .tr {
+        grid-area: 1/2;
+    }
+
+    .sm-icons {
+        grid-area: 1/3;
+        
+    }
+
 }
