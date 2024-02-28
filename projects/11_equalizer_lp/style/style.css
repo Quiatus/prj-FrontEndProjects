@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* font-family: "IBM Plex Sans", sans-serif; */
+
+:root {
+    /* Color */
+
+    --clr-cyan: #66E2DC;
+    --clr-orange: #FA7453;
+    --clr-gold: #FFB964;
+    --clr-white: #FCFAF9;
+    --clr-black: #191826;
+
+    /* Font */
+
+    --font-h1: 700 clamp(40px, 10vw, 88px)/clamp(40px, 100%, 88px) "IBM Plex Sans", sans-serif;
+    --font-h2: 700 clamp(32px, 10vw, 40px)/48px "IBM Plex Sans", sans-serif;
+    --font-bh: 500 clamp(16px, 3vw, 20px)/34px "IBM Plex Sans", sans-serif;
+    --font-bm: 400 clamp(18px, 3vw, 20px)/30px "IBM Plex Sans", sans-serif;
+    --font-bf: 400 16px/26px "IBM Plex Sans", sans-serif;
+    --font-bp: 400 20px/32px "IBM Plex Sans", sans-serif;
+    --font-btn: 700 18px "IBM Plex Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    overflow-x:hidden;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main-background {
+    position: absolute;
+    content: url('../media/bg-main-mobile.png');
+    max-width: 582px;
+    max-height: 780px;
+    top: -30%;
+    left: 10%;
+    z-index: -1;
+} 
+
+/* Header */
+
+.logo {
+    margin-bottom: 15%;
+}
+
+.logo > img {
+    width: 146px;
+    height: auto;
+    display: block;
+}
+
+.header__text > h1 {
+    font: var(--font-h1);
+    color: var(--clr-black);
+    letter-spacing: -1px;
+    margin-bottom: 5%;
+}
+
+.header__text > p {
+    font: var(--font-bh);
+    line-height: 26px;
+    color: var(--clr-black);
+}
+
+.header-content {
+    margin-bottom: 40%;
+    padding: 2rem 10% 0;
+}
+
+/* Main */
+
+.main-content {
+    background-color: var(--clr-black);
+    position: relative;
+    border-radius: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 37rem;
+}
+
+.main-content-background {
+    padding: 0 3rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-phone {
+    max-width: clamp(208px, 50%, 280px);
+    height: auto;
+    display: block;
+    position: absolute;
+    top: -30%;
+}
+
+.info {
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 90%;
+    padding: 3rem 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: clamp(375px, 100%, 446px);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info > h2 {
+    font: var(--font-h2);
+}
+
+.info > p {
+    font: var(--font-bm);
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.big {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 65px;
+    line-height: 52px;
+    font-weight: 700;
+}
+
+.pr {
+    font: var(--font-bp);
+}
+
+/* Footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem ;
+    padding: 0 10%;
+    color: var(--clr-black);
+    font: var(--font-bf);
+}
+
+.lb::before {
+    content: '\a';
+    white-space: pre;
+}
+
+.sm-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.sm-icons > img:hover {
+    cursor: pointer;
+    filter: invert(76%) sepia(67%) saturate(5345%) hue-rotate(329deg) brightness(106%) contrast(96%)
+}
+
+/* Buttons */
+
+.btn {
+    width: clamp(296px, 100%, 333px);
+    height: 61px;
+    border-radius: 0.75rem;
+    font: var(--font-btn);
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+.btn-ios {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.btn-ios::before {
+    content: url('../media/icon-apple.svg');
+}
+
+.btn-ios:hover,
+.btn-ios:focus-visible {
+    background-color: var(--clr-cyan);
+    cursor: pointer;
+}
+
+.btn-android {
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+.btn-android::before {
+    content: url('../media/icon-android.svg');
+}
+
+.btn-android:hover,
+.btn-android:focus-visible {
+    background-color: var(--clr-gold);
+    cursor: pointer;
+}
