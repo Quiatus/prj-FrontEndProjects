@@ -163,8 +163,6 @@ p {
     }
 
     .stat {
-        flex-grow: 1;
-        justify-content: start;
         align-items: start;
     }
 }
