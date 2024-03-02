@@ -1,40 +1,116 @@
-/* 
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
 
-# Front-end Style Guide
+:root {
+    /* Colors */
 
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-Bright orange: hsl(31, 77%, 52%)
-Dark cyan: hsl(184, 100%, 22%)
-Very dark cyan: hsl(179, 100%, 13%)
-
-### Neutral
-
-Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
-Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 15px
-
-### Font
-
-- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
-- Weights: 400
-
-- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
-- Weights: 700
+    --clr-orange: hsl(31, 77%, 52%);
+    --clr-cyan: hsl(184, 100%, 22%);
+    --clr-darkcyan: hsl(179, 100%, 13%);
+    --clr-tm: hsla(0, 0%, 100%, 0.75);
+    --clr-th: hsl(0, 0%, 95%);
 
 
-*/
+    /* Fonts */
+
+    --font-h: 700 40px "Big Shoulders Display", sans-serif;
+    --font-m: 400 15px/25px "Lexend Deca", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-th);
+}
+
+main {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    max-width: 327px;
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 1.5rem;
+}
+
+img {
+    display: block;
+    width: 64px;
+    height: auto;
+}
+
+button {
+    width: 146px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    background-color: var(--clr-th);
+    font: var(--font-m);
+}
+
+button:hover, 
+button:focus-visible {
+    cursor: pointer;
+    color: var(--clr-tm);
+    background-color: transparent;
+    border: 2px solid var(--clr-th);
+}
+
+h1 {
+    font: var(--font-h);
+    color: var(--clr-th);
+    text-transform: uppercase;
+}
+
+p {
+    font: var(--font-m);
+    color: var(--clr-tm);
+}
+
+.orange {
+    background-color: var(--clr-orange);
+}
+
+.cyan {
+    background-color: var(--clr-cyan);
+}
+
+.darkcyan {
+    background-color: var(--clr-darkcyan);
+}
+
+.torange {
+    color: var(--clr-orange);
+}
+
+.tcyan {
+    color: var(--clr-cyan);
+}
+
+.tdarkcyan {
+    color: var(--clr-darkcyan);
+}
+
+@media (min-width: 1000px) {
+    main {
+        flex-direction: row;
+        max-width: 920px;
+    }
+
+    p {
+        margin-bottom: 5rem;
+    }
+}
