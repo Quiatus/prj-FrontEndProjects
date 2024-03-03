@@ -140,7 +140,7 @@ footer {
     align-items: center;
     position: relative;
     background: url('../media/image-footer-mob.jpg');
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -339,8 +339,9 @@ span {
         position: relative;
     }
 
-    .footer {
+    footer {
         background: url('../media/image-footer.jpg');
+        background-size: cover;
     }
     
 }
