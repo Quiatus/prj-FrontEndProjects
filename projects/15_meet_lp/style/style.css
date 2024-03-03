@@ -33,6 +33,7 @@
 
 html {
     overflow-x: hidden;
+    width: 100vw;
 }
 
 body {
@@ -40,6 +41,11 @@ body {
 }
 
 /* Header */
+
+.desk-left, 
+.desk-right {
+    display: none;
+}
 
 header {
     display: flex;
@@ -58,14 +64,12 @@ header {
 
 .hero {
     margin-bottom: 3rem;
-   
 }
 
 .hero--img {
     display: block;
     width: 110vw;
     height: auto;
-    
 }
 
 .header--text {
@@ -138,7 +142,6 @@ footer {
     background: url('../media/image-footer-mob.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: top center;
 }
 
 .overlay {
@@ -283,11 +286,67 @@ span {
     .buttons {
         flex-direction: row;
     }
+
+    .footer--text > p {
+        width: 350px;
+    }
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .picture-grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
+    }
+
+    .footer--text {
+        padding: 4rem 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 2rem;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    .desk-left, 
+    .desk-right {
+        display: block;
+        position: absolute;
+        width: auto;
+        height: 100%;
+        top: 0;
+    }
+
+    .desk-left {
+        left: -90%
+    }
+
+    .desk-right {
+        right: -90%
+    }
+
+    .header--content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .footer {
+        background: url('../media/image-footer.jpg');
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+    .footer--text {
+        width: 80%;
     }
 }
