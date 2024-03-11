@@ -1,0 +1,258 @@
+/* 
+
+- Weights: 400, 500, 700
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --clr-darkmagenta: hsl(300, 43%, 22%);
+    --clr-pink: hsl(333, 80%, 67%);
+    --clr-darkgreymagenta: hsl(303, 10%, 53%);
+    --clr-lightgraymagenta: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-star: hsl(28, 84%, 61%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "League Spartan", sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bgt, 
+.bgb {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+
+.bgt {
+    top: 0;
+    left: 0;
+}
+
+.bgb {
+    bottom: 0;
+    right: 0;
+}
+
+main {
+    width: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.intro-text > p {
+    max-width: 350px;
+    text-align: center;
+}
+
+.ratings,
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.reviews {
+    margin-bottom: 0;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--clr-lightgraymagenta);
+    border-radius: 0.5rem;
+}
+
+.star::before {
+    content: '★ ★ ★ ★ ★';
+    color: var(--clr-star);
+    font-size: 22px;
+    line-height: 1;
+}
+
+.review {
+    font-size: 17px;
+    line-height: 22px;
+    color: var(--clr-lightgraymagenta);
+    padding: 2rem;
+    background-color: var(--clr-darkmagenta);
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 350px;
+}
+
+.review-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.review-image {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Typography */
+
+.lb::before {
+    content: "\a";
+    white-space: pre;
+}
+
+h1 {
+    font-size: clamp(36px, 7vw, 56px);
+    line-height: clamp(32px, 7vw, 48px);
+    letter-spacing: -1px;
+    color: var(--clr-darkmagenta);
+    text-align: center;
+}
+
+.text-darkgrey {
+    font-size: 19px;
+    color: var(--clr-darkgreymagenta);
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.text-magenta {
+    font-size: 17px;
+    color: var(--clr-darkmagenta);
+    font-weight: 700;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-pink {
+    color: var(--clr-pink);
+    font-weight: 400;
+}
+
+/* Media */
+
+@media (min-width: 1200px) {
+    .bgb {
+        content: url('../media/bg-pattern-bottom-desktop.svg');
+        right: -20%;
+        bottom: -20%;
+    }
+
+    .bgt {
+        content: url('../media/bg-pattern-top-desktop.svg');
+        left: -20%;
+        top: -20%;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 3rem;
+        padding: 5% 10%;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .intro-text > p {
+        max-width: 470px;
+        text-align: left;
+    }
+
+    .intro-text {
+        align-items: start;
+    }
+
+    .ratings {
+        justify-content: center;
+        align-items: end;
+        margin-bottom: 2rem;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        max-width: 450px;
+    }
+
+    .reviews {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        margin-bottom: 0;
+        grid-area: 2/1/2/3;
+       
+    }
+
+    .rating:nth-of-type(1) {
+        margin-right: 6rem;
+    }
+
+    .rating:nth-of-type(2) {
+        margin-right: 3rem;
+    }
+
+    .review {
+        max-width: 100%;
+        min-height: 100%;
+        padding-bottom: 0;
+    }
+
+    .review:nth-of-type(2) {
+        margin-top: 2rem;
+    }
+
+    .review:nth-of-type(3) {
+        margin-top: 4rem;
+    }
+}
