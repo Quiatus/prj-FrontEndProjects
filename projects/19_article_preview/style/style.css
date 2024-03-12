@@ -8,7 +8,7 @@
     --clr-darkblue: hsl(217, 19%, 35%);
     --clr-darkgray: hsl(214, 17%, 51%);
     --clr-gray: hsl(212, 23%, 69%);
-    --clr-lightgray: hsl(210, 46%, 95%);
+    --clr-lightgray: #ecf2f8;
 }
 
 * {
@@ -24,4 +24,128 @@ html {
 
 body {
     min-height: 100vh;
+    background-color: var(--clr-lightgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 90vw;
+    max-width: 330px;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-img > img {
+    display: block;
+    width: 100%;
+    height: 200px
+}
+
+.main-text {
+    padding: 2rem 1.5rem 1rem;
+}
+
+.main-text > h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--clr-darkblue);
+    line-height: 24px;
+    margin-bottom: 1rem;
+}
+
+.main-text > p {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--clr-darkgray);
+    line-height: 20px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 68px;
+    gap: 1rem;
+   
+}
+
+.footer > img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+}
+
+.footer > p {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--clr-darkblue);
+    line-height: 20px;
+    flex-grow: 1;
+} 
+
+.text-bottom {
+    font-weight: 500;
+    color: var(--clr-gray);
+}
+
+.text-bottom::before {
+    content: '\a';
+    white-space: pre;
+}
+
+button {
+    width: 32px;
+    height: 32px;
+    background-color: var(--clr-lightgray);
+    border: none;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+button::before {
+    content: url('../media/icon-share.svg');
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--clr-darkgray);
+}
+
+button:hover::before {
+    content: url('../media/icon-share-white.svg');
+}
+
+.share {
+    position: absolute;
+    background-color: var(--clr-darkblue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 68px;
+    gap: 1rem;
+    width: 100%;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.share > img {
+    display: block;
+    width: 20px;
+    height: auto;
+}
+
+.share > span {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--clr-gray);
 }
