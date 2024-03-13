@@ -82,7 +82,7 @@ main {
     border-top-left-radius: 8px 5px;
     border-top-right-radius: 8px 5px;
     border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-right-radius: 8px; 
 }
 
 .feature-card > h2 {
