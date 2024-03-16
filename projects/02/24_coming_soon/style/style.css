@@ -1,0 +1,29 @@
+/* 
+- Weights: 300, 600, 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-blue: hsl(223, 87%, 63%);
+    --clr-lightblue: hsl(223, 100%, 88%);
+    --clr-red: hsl(354, 100%, 66%);
+    --clr-grey: hsl(0, 0%, 59%);
+    --clr-darkblue: hsl(209, 33%, 12%)
+}
+
+html {
+    font-family: "Libre Franklin", sans-serif;
+    width: 100vw;
+}
+
+body {
+    min-height: 100vh;
+}
+
