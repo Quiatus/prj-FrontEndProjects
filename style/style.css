@@ -14,18 +14,19 @@ html {
 
 body {
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 header {
     width: 100vw;
-    background: linear-gradient(aliceblue, #DDF);
-    padding: 2rem 0;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    margin-bottom: 1rem;
 }
 
 header h1 {
+    background: linear-gradient(aliceblue, #DDF);
+    padding: 2rem 0;  
     text-align: center;
     color: indigo;
     font-weight: bold;
@@ -34,14 +35,18 @@ header h1 {
     text-shadow: 0 0 2px indigo;
 }
 
-main {
+.projects {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+}
+
+main {
     margin: 1rem;
 }
 
-.project-box {
+.project-box,
+.filters {
     background-color: #DDF;
     border-radius: 1rem;
     padding: 1rem;
@@ -65,14 +70,19 @@ main {
     position: relative;
 }
 
+.projectText > p {
+    margin-bottom: 1rem;
+}
+
 .projectPicture {
     overflow: hidden;
     border-radius: 1rem;
+    width: 100%;
 }
 
 .projectPicture > img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 1rem;
     transition: transform 0.25s;
@@ -131,8 +141,8 @@ a:hover {
 }
 
 .filters {
-    grid-area: 1/1/1/2;
     padding-left: 2rem;
+    margin: 1rem 1rem 0;
 }
 
 .filters form {
@@ -152,7 +162,7 @@ a:hover {
 }
 
 select {
-    width: 50%;
+    width: 200px;
     font: inherit;
     outline: none;
     background-color: aliceblue;
@@ -177,10 +187,8 @@ hr {
 @media only screen and (min-width: 600px) {
     header h1 {
         font-size: 3rem;
-    }
-
-    main {
-        margin: auto 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
 
     .project-box {
@@ -208,20 +216,20 @@ hr {
 }
 
 @media only screen and (min-width: 1200px) {
-
     header {
-        margin: 0 auto 1rem;
-        max-width: 1200px;
+        max-width: 1440px;
     }
 
     main {
-        margin: 0 auto 1rem;
-        max-width: 1200px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        max-width: 1440px;
     }
 
     .filters {
-        grid-area: 1/1/1/3;
+        margin: 1rem 0 0
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
