@@ -8,7 +8,6 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -62,11 +61,26 @@ main {
     margin-bottom: 0.5rem;
 }
 
-img {
+.projectText {
+    position: relative;
+}
+
+.projectPicture {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.projectPicture > img {
     display: block;
     max-width: 100%;
     height: auto;
     border-radius: 1rem;
+    transition: transform 0.25s;
+    transform: scale(1);
+}
+
+.projectPicture > img:hover {
+    transform: scale(1.2);
 }
 
 a, a:visited {
@@ -79,7 +93,87 @@ a:hover {
     opacity: 0.6;
 }
 
-@media only screen and (min-width: 480px) {
+.rev {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ve {
+    color: lightseagreen;
+    font-weight: 700;
+}
+
+.ea {
+    color: green;
+    font-weight: 700;
+}
+
+.in {
+    color: goldenrod;
+    font-weight: 700;
+}
+
+.ad {
+    color: orangered;
+    font-weight: 700;
+}
+
+.gu {
+    color: darkred;
+    font-weight: 700;
+}
+
+.icons > img {
+    display: inline;
+    width: 24px;
+    height: auto;
+}
+
+.filters {
+    grid-area: 1/1/1/2;
+    padding-left: 2rem;
+}
+
+.filters form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.filter-tech {
+    display: flex;
+    flex-direction: row;
+}
+
+.filter-tech > img {
+    margin-right: 1rem;
+    margin-left: 0.25rem;
+}
+
+select {
+    font: inherit;
+    outline: none;
+    background-color: aliceblue;
+    border: 1px solid indigo;
+    border-radius: 0.25rem;
+    padding: 0 0.5rem;
+}
+
+input[type='checkbox'] {
+    border: 1px solid indigo;
+    width: 24px;
+    background-color: aliceblue;
+    accent-color: indigo;
+}
+
+hr {
+    width: 1px;
+    border: none;
+    background-color: indigo;
+}
+
+@media only screen and (min-width: 600px) {
     header h1 {
         font-size: 3rem;
     }
@@ -99,9 +193,14 @@ a:hover {
     .projectText {
         width: 50%;
     }
+
+    a {
+        position: absolute;
+        bottom: 0;
+    }
 }
 
-@media only screen and (min-width: 1232px) {
+@media only screen and (min-width: 1200px) {
 
     header {
         margin: 0 auto 1rem;
@@ -113,5 +212,9 @@ a:hover {
         max-width: 1200px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .filters {
+        grid-area: 1/1/1/3;
     }
 }
