@@ -136,8 +136,10 @@ a:hover {
 
 .rev {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .ve {
@@ -169,8 +171,15 @@ a:hover {
     font-weight: 700;
 }
 
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    justify-content: flex-end;
+}
+
 .icons > img {
-    display: inline;
+    display: block;
     width: 24px;
     height: auto;
 }
@@ -242,6 +251,12 @@ hr {
     .filters {
         align-items: flex-start;
     }
+
+    .rev {
+        flex-direction: row;
+        gap: 0;
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -269,5 +284,6 @@ hr {
     .projects {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
     }
 }
