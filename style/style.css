@@ -136,9 +136,7 @@ a:hover {
 
 .rev {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -253,8 +251,6 @@ hr {
     }
 
     .rev {
-        flex-direction: row;
-        gap: 0;
         margin-bottom: 0;
     }
 }
