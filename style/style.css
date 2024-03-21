@@ -83,7 +83,7 @@ main {
     top: -5px;
     z-index: 1;
     opacity: 0.9;
-    width: calc(100vw - 3rem);
+    width: calc(100vw - 2rem);
     display: flex;
     align-items: center;
 }
