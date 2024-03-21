@@ -137,8 +137,8 @@ a:hover {
 
 .filters form {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .filter-tech {
@@ -152,6 +152,7 @@ a:hover {
 }
 
 select {
+    width: 50%;
     font: inherit;
     outline: none;
     background-color: aliceblue;
@@ -197,6 +198,12 @@ hr {
     a {
         position: absolute;
         bottom: 0;
+    }
+
+    .filters form {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
     }
 }
 
