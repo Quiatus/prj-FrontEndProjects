@@ -11,31 +11,34 @@
 <body>
     <header>
         <h1>Frontend Layouts</h1>
-
-        <div class="filters">
-            <form action="">
-                <select id="select">
-                    <option value="0" selected>All</option>
-                    <option value="1">Very Easy</option>
-                    <option value="2">Easy</option>
-                    <option value="3">Intermediate</option>
-                    <option value="4">Advanced</option>
-                    <option value="5">Guru</option>
-                </select>
-                <hr>
-                <div class="filter-tech">
-                    <input type="checkbox" name="filtercheck" id="html" checked><img src="media/html.svg" alt="">
-                    <input type="checkbox" name="filtercheck" id="css" checked><img src="media/css.svg" alt="">
-                    <input type="checkbox" name="filtercheck" id="js" checked><img src="media/js.svg" alt="">
-                </div>
-                
-            </form>
-        </div> 
     </header>
+
+    <div class="filters">
+        <form action="">
+            <select id="select">
+                <option value="0" selected>All</option>
+                <option value="1">Very Easy</option>
+                <option value="2">Easy</option>
+                <option value="3">Intermediate</option>
+                <option value="4">Advanced</option>
+                <option value="5">Guru</option>
+            </select>
+            <hr>
+            <div class="filter-tech">
+                <input type="checkbox" name="filtercheck" id="html" checked><img src="media/html.svg" alt="">
+                <input type="checkbox" name="filtercheck" id="css" checked><img src="media/css.svg" alt="">
+                <input type="checkbox" name="filtercheck" id="js" checked><img src="media/js.svg" alt="">
+            </div>
+        </form>
+    </div> 
     
     <main>
         <div class="projects">
         </div>
     </main>
+
+    <footer>
+        &copy; <span id="foot"></span>
+    </footer>
 </body>
 </html>

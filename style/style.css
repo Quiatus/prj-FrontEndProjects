@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+    --clr-indigo: #AAC;
+    --clr-lightblue: #002;
+    --clr-lightpurple: #224;
+    --clr-maintext: #EEF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,26 +20,39 @@ html {
 }
 
 body {
-    background-color: aliceblue;
+    background-color: var(--clr-lightblue);
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    position: relative;
+    color: var(--clr-maintext);
 }
 
 header {
     width: 100vw;
 }
 
+footer {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    background: linear-gradient(var(--clr-lightpurple), var(--clr-lightblue));
+    padding: 1rem 0;  
+    width: 100vw;
+    opacity: 0.9;
+}
+
 header h1 {
-    background: linear-gradient(aliceblue, #DDF);
-    padding: 2rem 0;  
+    background: linear-gradient(var(--clr-lightblue), var(--clr-lightpurple));
+    padding: 1rem 0;  
     text-align: center;
-    color: indigo;
+    color: var(--clr-indigo);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 10vw, 3rem);
     letter-spacing: 2px;
-    text-shadow: 0 0 2px indigo;
+    text-shadow: 0 0 2px var(--clr-indigo);
+    margin-bottom: 1rem;
 }
 
 .projects {
@@ -42,13 +62,13 @@ header h1 {
 }
 
 main {
-    margin: 1rem;
+    margin: 1rem 1rem 4rem;
 }
 
 .project-box,
 .filters {
-    background-color: #DDF;
-    border-radius: 1rem;
+    background-color: var(--clr-lightpurple);
+    border-radius: 0.5rem;
     padding: 1rem;
     display: flex;
     flex-wrap: nowrap;
@@ -57,8 +77,19 @@ main {
     gap: 1rem;
 }
 
+.filters {
+    margin: 0 1rem;
+    position: sticky;
+    top: -5px;
+    z-index: 1;
+    opacity: 0.9;
+    width: calc(100vw - 3rem);
+    display: flex;
+    align-items: center;
+}
+
 .project-box h3 {
-    color: indigo;
+    color: var(--clr-indigo);
 }
 
 .project-box h3, 
@@ -76,7 +107,7 @@ main {
 
 .projectPicture {
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: 100%;
 }
 
@@ -84,7 +115,7 @@ main {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     transition: transform 0.25s;
     transform: scale(1);
 }
@@ -94,7 +125,7 @@ main {
 }
 
 a, a:visited {
-    color: indigo;
+    color: var(--clr-indigo);
     text-decoration: none;
     font-weight: bold;
 }
@@ -134,15 +165,14 @@ a:hover {
     font-weight: 700;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 .icons > img {
     display: inline;
     width: 24px;
     height: auto;
-}
-
-.filters {
-    padding-left: 2rem;
-    margin: 1rem 1rem 0;
 }
 
 .filters form {
@@ -165,32 +195,27 @@ select {
     width: 200px;
     font: inherit;
     outline: none;
-    background-color: aliceblue;
-    border: 1px solid indigo;
+    background-color: var(--clr-lightblue);
+    border: 1px solid var(--clr-indigo);
+    color: var(--clr-maintext);
     border-radius: 0.25rem;
     padding: 0 0.5rem;
 }
 
 input[type='checkbox'] {
-    border: 1px solid indigo;
+    border: 1px solid var(--clr-indigo);
     width: 24px;
-    background-color: aliceblue;
-    accent-color: indigo;
+    background-color: var(--clr-lightblue);
+    accent-color: var(--clr-indigo);
 }
 
 hr {
     width: 1px;
     border: none;
-    background-color: indigo;
+    background-color: var(--clr-indigo);
 }
 
 @media only screen and (min-width: 600px) {
-    header h1 {
-        font-size: 3rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-    }
-
     .project-box {
         flex-direction: row;
     }
@@ -213,19 +238,32 @@ hr {
         flex-direction: row;
         gap: 1rem;
     }
+
+    .filters {
+        align-items: flex-start;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    header {
-        max-width: 1440px;
+    header h1 {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
     }
 
+    footer {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    header, 
+    footer,
     main {
-        max-width: 1440px;
+        max-width: 1200px;
     }
 
     .filters {
-        margin: 1rem 0 0
+        margin: 0;
+        max-width: 1200px;
     }
 
     .projects {

@@ -3,6 +3,9 @@ import { projectBoxes } from './elems.js'
 const select = document.getElementById('select')
 const checks = document.getElementsByName('filtercheck')
 const projectGrid = document.querySelector('.projects')
+const foot = document.getElementById('foot')
+
+const date = new Date()
 
 let selectedValues = {
     diff: 0,
@@ -44,6 +47,8 @@ const display = () => {
     if (!filteredResults.length) {
         projectGrid.innerHTML = `No results`
     }
+
+    foot.innerHTML = `${date.getFullYear()} Quiatus | Displaying <span class='bold'>${filteredResults.length}</span> results`
 }
 
 const constructElement = (projectBox) => {
