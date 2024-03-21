@@ -9,8 +9,7 @@ const date = new Date()
 
 let selectedValues = {
     diff: 0,
-    html: true,
-    css: true,
+    htmlcss: true,
     js: true
 }
 
@@ -32,9 +31,10 @@ const display = () => {
     for (let i = 0; i < projectBoxes.length; i++) {
         if (selectedValues.diff === projectBoxes[i].difficulty || selectedValues.diff === 0) {
             filteredResults.push(projectBoxes[i])
-            if ((selectedValues.html === false && projectBoxes[i].checks.html === true)
-            || (selectedValues.css === false && projectBoxes[i].checks.css === true)
-            || (selectedValues.js === false && projectBoxes[i].checks.js === true)) {
+            if (selectedValues.htmlcss === false && projectBoxes[i].checks.js === false) {
+                filteredResults.pop(projectBoxes[i])
+            }
+            if (selectedValues.js === false && projectBoxes[i].checks.js === true) {
                 filteredResults.pop(projectBoxes[i])
             }
         }
@@ -77,6 +77,8 @@ const constructElement = (projectBox) => {
         <div class="rev">
             ${difficulty}
             <div class="icons">
+                <img src='media/html.svg' title='html' alt='html'>
+                <img src='media/css.svg' title='css' alt='css'>
                 ${imgs}
             </div>
         </div>

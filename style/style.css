@@ -44,7 +44,7 @@ footer {
 }
 
 header h1 {
-    background: linear-gradient(var(--clr-lightblue), var(--clr-lightpurple));
+    background-color: var(--clr-lightpurple);
     padding: 1rem 0;  
     text-align: center;
     color: var(--clr-indigo);
@@ -194,9 +194,27 @@ a:hover {
     flex-direction: row;
 }
 
-.filter-tech > img {
-    margin-right: 1rem;
-    margin-left: 0.25rem;
+.doubleicon {
+    position: relative;
+    width: 36px;
+}
+
+.doubleicon img:first-child, 
+.doubleicon img:last-child {
+    display: block;
+    width: 24px;
+    height: auto;
+    position: absolute;
+}
+
+.doubleicon img:first-child {
+    top: 0;
+    left: 0;
+}
+
+.doubleicon img:last-child {
+    bottom: 0;
+    right: 0;
 }
 
 select {
@@ -215,6 +233,11 @@ input[type='checkbox'] {
     width: 24px;
     background-color: var(--clr-lightblue);
     accent-color: var(--clr-indigo);
+    margin: 0 0.25rem 0 1rem;
+}
+
+input[type='checkbox']:first-of-type {
+    margin-left: 0;
 }
 
 hr {
