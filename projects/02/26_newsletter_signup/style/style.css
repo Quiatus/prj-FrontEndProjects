@@ -27,7 +27,7 @@ body {
 }
 
 main {
-    max-width: 375px;
+    max-width: 420px;
     background-color: var(--clr-white);
 }
 
@@ -152,7 +152,6 @@ button:active {
     position: relative;
     padding: 2rem 1.5rem;
     min-height: 100vh;
-    max-width: 375px;
 }
 
 .lb::before {
