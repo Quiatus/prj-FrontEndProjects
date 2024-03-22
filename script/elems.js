@@ -260,10 +260,10 @@ export const projectBoxes = [
         }
     },
     {
-        pictureUrl: 'media/25.png',
+        pictureUrl: 'media/26.png',
         projectUrl: 'projects/02/26_newsletter_signup/index.html', 
         title: 'Newsletter singup',
-        body: 'Newsletter singup.',
+        body: 'Newsletter singup page. Uses combination of CSS grid and flex. Simple JS form verification.',
         difficulty: 2,
         checks: {
             js: true
