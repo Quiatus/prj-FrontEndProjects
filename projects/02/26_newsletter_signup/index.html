@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter signup</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/main.js" defer></script>
+</head>
+<body>
+
+    <main>
+        <section class="newsletter">
+            <section class="hero">
+                <img class="hero-img" src="media/illustration-sign-up-mobile.svg" alt="hero">
+            </section>
+            <section class="text">
+                <h1>Stay updated! </h1>
+                <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul>
+                    <li><span>Product discovery and building what matters</span></li>
+                    <li>Measuring to ensure updates are a success </li>
+                    <li>And much more! </li>
+                </ul>
+                <div class="form">
+                    <div class="errors">
+                        <span>Email address</span>
+                        <span class="error" id="error"></span>
+                    </div>
+                    <input id="input" type="text" placeholder="email@company.com">
+                    <button id="btnSubmit">Subscribe to monthly newsletter</button>
+                </div>
+            </section>
+        </section>
+
+        <section class="message hidden">
+            <section class="confirm">
+                <img src="media/icon-success.svg" alt="success">
+                <h1>Thanks for <span class="lb">subscribing!</span></h1>
+                <p>A confirmation email has been sent to <span id="email"></span>. Please open it and click the button inside to confirm your subscription.</p>
+            </section>
+            <button id="btnDismiss">Dismiss message</button>
+        </section>
+    </main>
+    
+</body>
+</html>
+
+<!-- 
+
+
+
+
+
+
+  
+
+
+
+  
+
+ -->

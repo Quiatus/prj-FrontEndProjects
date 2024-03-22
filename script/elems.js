@@ -258,5 +258,15 @@ export const projectBoxes = [
         checks: {
             js: false
         }
+    },
+    {
+        pictureUrl: 'media/25.png',
+        projectUrl: 'projects/02/26_newsletter_signup/index.html', 
+        title: 'Newsletter singup',
+        body: 'Newsletter singup.',
+        difficulty: 2,
+        checks: {
+            js: true
+        }
     }
 ]

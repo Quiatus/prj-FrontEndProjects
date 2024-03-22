@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --clr-tomato: hsl(4, 100%, 67%);
+    --clr-darkgrey: hsl(234, 29%, 20%);
+    --clr-charcoalgrey: hsl(235, 18%, 26%);
+    --clr-grey: hsl(231, 7%, 60%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    width: 100vw;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-charcoalgrey);
+}
+
+main {
+    max-width: 375px;
+    background-color: var(--clr-white);
+}
+
+.newsletter {
+    display: grid;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--clr-darkgrey);
+}
+
+p {
+    font-size: 16px;
+    color: var(--clr-darkgrey);
+    line-height: 24px;
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--clr-darkgrey);
+    font-weight: 500;
+}
+
+ul li::before {
+    content: url('../media/icon-list.svg');
+    margin-right: 1rem;
+}
+
+ul li {
+    display: flex;
+    align-items: start;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.errors {
+    color: var(--clr-darkgrey);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.error {
+    color: var(--clr-tomato);
+}
+
+input {
+    width: 100%;
+    height: 56px;
+    font: 400 16px "Roboto", sans-serif;
+    border-radius: 0.5rem;
+    border: 1px solid hsla(231, 7%, 60%, 50%);
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid var(--clr-darkgrey);
+}
+
+.boxerror {
+    color: var(--clr-tomato);
+    background-color: hsla(4, 100%, 67%, 25%);
+    border: 1px solid var(--clr-tomato);
+}
+
+button {
+    width: 100%;
+    height: 56px;
+    font: 400 16px "Roboto", sans-serif;
+    color: var(--clr-white);
+    background-color: var(--clr-darkgrey);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    transition: transform 0.05s;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #FF6A3A, #FF527B);
+    filter: drop-shadow(0 5px 10px #FF6A3A);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+::placeholder {
+    color: var(--clr-grey);
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem 1.5rem;
+    min-height: 100vh;
+    max-width: 375px;
+}
+
+.lb::before {
+    white-space: pre;
+    content: '\a';
+}
+
+.confirm {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.confirm > img {
+    width: 64px;
+    height: auto;
+    display: block;
+}
+
+.message button {
+    width: calc(100% - 3rem);
+    position: absolute;
+    bottom: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#email {
+    font-weight: 700;
+}

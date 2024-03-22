@@ -47,11 +47,11 @@ header h1 {
     background-color: var(--clr-lightpurple);
     padding: 1rem 0;  
     text-align: center;
-    color: var(--clr-indigo);
+    color: var(--clr-maintext);
     font-weight: bold;
     font-size: clamp(1rem, 10vw, 3rem);
     letter-spacing: 2px;
-    text-shadow: 0 0 2px var(--clr-indigo);
+    text-shadow: 0 0 5px var(--clr-indigo);
     margin-bottom: 1rem;
 }
 
