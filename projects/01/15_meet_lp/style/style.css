@@ -52,14 +52,14 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5% 10% 0;
+    padding: 3% 10%;
     margin-bottom: 4rem;
     overflow: hidden;
 }
 
 .logo {
     display: block;
-    margin: 3rem auto;
+    margin: 3rem auto 5rem;
 }
 
 .hero {
