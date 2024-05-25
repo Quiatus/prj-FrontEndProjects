@@ -271,7 +271,17 @@ export const projectBoxes = [
     },
     {
         pictureUrl: 'media/26.png',
-        projectUrl: 'projects/02/27_bmi_calculator/index.html', 
+        projectUrl: 'projects/02/27_contact_form/index.html', 
+        title: 'Contact form',
+        body: 'Contact form',
+        difficulty: 2,
+        checks: {
+            js: true
+        }
+    },
+    {
+        pictureUrl: 'media/26.png',
+        projectUrl: 'projects/02/28_bmi_calculator/index.html', 
         title: 'BMI Calculator',
         body: 'BMI Calculator',
         difficulty: 2,
