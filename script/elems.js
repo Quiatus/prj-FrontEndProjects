@@ -5,9 +5,10 @@ export const projectBoxes = [
         title: 'Results summary component',
         body: 'Simple responsive layout to display test results. Uses media queries to resize based on screen width.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/01.png',
@@ -15,9 +16,10 @@ export const projectBoxes = [
         title: 'QR Code',
         body: 'A box with QR code.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/02.png',
@@ -25,9 +27,10 @@ export const projectBoxes = [
         title: 'Recipe',
         body: 'Responsive layout using flex boxes.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/03.png',
@@ -35,9 +38,10 @@ export const projectBoxes = [
         title: 'Social Links Profile',
         body: 'Responsive box with social media links',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/04.png',
@@ -45,9 +49,10 @@ export const projectBoxes = [
         title: 'Blog preview',
         body: 'Blog article preview box.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/05.png',
@@ -55,9 +60,10 @@ export const projectBoxes = [
         title: 'FAQ Page',
         body: 'FAQ Page. Each question can be expanded or collapsed.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/05.png',
@@ -65,9 +71,10 @@ export const projectBoxes = [
         title: 'Landing page',
         body: 'Landing page. Under construction.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/07.png',
@@ -75,9 +82,10 @@ export const projectBoxes = [
         title: 'Product preview',
         body: 'Product preview card. Responsive layout.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/08.png',
@@ -85,9 +93,10 @@ export const projectBoxes = [
         title: 'Rating card',
         body: 'Rating card with interactive elements.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/09.png',
@@ -95,9 +104,10 @@ export const projectBoxes = [
         title: 'e-Learning page',
         body: 'e-Learning program landing page. Responsive using CSS Grid and Flexbox.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/10.png',
@@ -105,9 +115,10 @@ export const projectBoxes = [
         title: 'NFT preview card',
         body: 'NFT preview card. Resizes using clamp function.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/11.png',
@@ -115,9 +126,10 @@ export const projectBoxes = [
         title: 'Equalizer landing page',
         body: 'Equalizer landing page. Uses grid and clamp to resize.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/12.png',
@@ -125,9 +137,10 @@ export const projectBoxes = [
         title: 'Order summary',
         body: 'Order summary card. Uses media query.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/13.png',
@@ -135,9 +148,10 @@ export const projectBoxes = [
         title: 'Stats preview',
         body: 'Stats preview card component',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/14.png',
@@ -145,9 +159,10 @@ export const projectBoxes = [
         title: 'Preview card',
         body: 'Preview card. Uses media query for responsive design.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/15.png',
@@ -155,9 +170,10 @@ export const projectBoxes = [
         title: 'Meet landing page',
         body: 'Meet landing page. Uses media query and clamp to achieve responsive design.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/16.png',
@@ -165,9 +181,10 @@ export const projectBoxes = [
         title: 'Pod access request',
         body: 'Pod access request landing page. Responsive layout using combination of flex and grid.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/17.png',
@@ -175,9 +192,10 @@ export const projectBoxes = [
         title: 'Profile card',
         body: 'Profile card. Uses css flexbox.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/18.png',
@@ -185,9 +203,10 @@ export const projectBoxes = [
         title: 'Social proof',
         body: 'Social proof page. Uses CSS Grid and Flex for responsive layout.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/19.png',
@@ -195,9 +214,10 @@ export const projectBoxes = [
         title: 'Article preview',
         body: 'Article preview page. Uses CSS Grid and Flex for responsive layout.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/20.png',
@@ -205,9 +225,10 @@ export const projectBoxes = [
         title: 'Feature section',
         body: '4-card feature section. Uses grid to position the cards.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/21.png',
@@ -215,9 +236,10 @@ export const projectBoxes = [
         title: 'Apparel page',
         body: 'Apparel page. Uses CSS grid to reposition elements based on screen width.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/22.png',
@@ -225,9 +247,10 @@ export const projectBoxes = [
         title: 'Sign-up form',
         body: 'Sign-up form. Responsive layout using CSS Flex. Basic form validation.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/23.png',
@@ -235,9 +258,10 @@ export const projectBoxes = [
         title: 'Price component',
         body: 'Price component. Responsive layout using CSS grid.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/24.png',
@@ -245,9 +269,10 @@ export const projectBoxes = [
         title: 'Coming soon page',
         body: 'Ping coming soon page. Uses combination of CSS grid and flex.',
         difficulty: 1,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/25.png',
@@ -255,9 +280,10 @@ export const projectBoxes = [
         title: 'Huddle LP',
         body: 'Huddle landing page. Responsive layout using CSS Flex.',
         difficulty: 1,
-        checks: {
-            js: false
-        }
+        tech: [
+            {htmlcss: true},
+            {js: false}
+        ]
     },
     {
         pictureUrl: 'media/26.png',
@@ -265,9 +291,10 @@ export const projectBoxes = [
         title: 'Newsletter singup',
         body: 'Newsletter singup page. Uses combination of CSS grid and flex. Simple JS form verification.',
         difficulty: 2,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/26.png',
@@ -275,9 +302,10 @@ export const projectBoxes = [
         title: 'Contact form',
         body: 'Contact form',
         difficulty: 2,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
     {
         pictureUrl: 'media/26.png',
@@ -285,8 +313,9 @@ export const projectBoxes = [
         title: 'BMI Calculator',
         body: 'BMI Calculator',
         difficulty: 2,
-        checks: {
-            js: true
-        }
+        tech: [
+            {htmlcss: true},
+            {js: true}
+        ]
     },
 ]

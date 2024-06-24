@@ -1,72 +1,64 @@
 import { projectBoxes } from './elems.js'
 
-const select = document.getElementById('select')
+const select = document.querySelector('#select')
 const checks = document.getElementsByName('filtercheck')
-const projectGrid = document.querySelector('.projects')
-const foot = document.getElementById('foot')
 
 const date = new Date()
-
 let selectedValues = {
-    diff: 0,
-    htmlcss: true,
-    js: true
+    difficulty: 0,
+    tech: [
+        {htmlcss: true},
+        {js: true}
+    ]
 }
 
 select.addEventListener('change', (e) => {
-    selectedValues.diff = parseInt (e.target.value)
+    selectedValues.difficulty = +e.target.value
     display()
 })
 
 checks.forEach(item => item.addEventListener('change', (e) => {
-    for (let i = 0; i < checks.length; i++) {
-        selectedValues[checks[i].id] = checks[i].checked
-    }
+    const selectedTech = e.target.id
+    
+    selectedValues.tech.map(t => {
+        const techList = Object.keys(t)[0]
+        if (techList === selectedTech) {
+            t[techList] ? t[techList] = false : t[techList] = true
+        }
+    })
     display()
 }))
 
+const filterResults = (arr) => {
+   if (JSON.stringify(selectedValues.tech) === JSON.stringify(arr)) return false
+   return true
+}
+
 const display = () => {
-    projectGrid.innerHTML = ``
+    const foot = document.querySelector('#foot')
+    const projectGrid = document.querySelector('.projects')
     let filteredResults = []
-    for (let i = 0; i < projectBoxes.length; i++) {
-        if (selectedValues.diff === projectBoxes[i].difficulty || selectedValues.diff === 0) {
-            filteredResults.push(projectBoxes[i])
-            if (selectedValues.htmlcss === false && projectBoxes[i].checks.js === false) {
-                filteredResults.pop(projectBoxes[i])
-            }
-            if (selectedValues.js === false && projectBoxes[i].checks.js === true) {
-                filteredResults.pop(projectBoxes[i])
-            }
+
+    projectGrid.innerHTML = ''
+
+    projectBoxes.map((item) => {
+        console.log(item)
+        if ((selectedValues.difficulty === item.difficulty || selectedValues.difficulty === 0) && filterResults(item.tech)){
+            filteredResults.push(item)
         }
-    }
+    })
 
-    for (let i = 0; i < filteredResults.length; i++) {
-        projectGrid.append(constructElement(filteredResults[i]))
-    }
+    filteredResults.map(item => projectGrid.insertAdjacentHTML('beforeend', constructElement(item)))
 
-    if (!filteredResults.length) {
-        projectGrid.innerHTML = `No results`
-    }
+    if (!filteredResults.length) projectGrid.innerHTML = `No results`
 
     foot.innerHTML = `${date.getFullYear()} Quiatus | Displaying <span class='bold'>${filteredResults.length}</span> results`
 }
 
 const constructElement = (projectBox) => {
-    const box = document.createElement('div')
-    let difficulty = ``
-    let imgs = ``
+    let difficultyString = [`<span class="ve">Very easy</span>`, `<span class="ea">Easy</span>`, `<span class="in">Intermediate</span>`,`<span class="ad">Advanced</span>`,`<span class="gu">Guru</span>` ]
 
-    for (const tech in projectBox.checks) {
-        projectBox.checks[tech] ? imgs += `<img src='media/${tech}.svg' title='${tech}' alt='${tech}'>` : ``
-    }
-
-    projectBox.difficulty === 1 ? difficulty = `<span class="ve">Very easy</span>` : ``
-    projectBox.difficulty === 2 ? difficulty = `<span class="ea">Easy</span>` : ``
-    projectBox.difficulty === 3 ? difficulty = `<span class="in">Intermediate</span>` : ``
-    projectBox.difficulty === 4 ? difficulty = `<span class="ad">Advanced</span>` : ``
-    projectBox.difficulty === 5 ? difficulty = `<span class="gu">Guru</span>` : ``
-
-    box.innerHTML = `
+    return `
     <div class="project-box">
     <div class="projectPicture">
         <img src="${projectBox.pictureUrl}" alt="Results summary component">
@@ -75,19 +67,22 @@ const constructElement = (projectBox) => {
         <h3>${projectBox.title}</h3>
         <p>${projectBox.body}</p>
         <div class="rev">
-            ${difficulty}
+            ${difficultyString[projectBox.difficulty - 1]}
             <div class="icons">
                 <img src='media/html.svg' title='html' alt='html'>
                 <img src='media/css.svg' title='css' alt='css'>
-                ${imgs}
+                ${projectBox.tech.map(tech => {
+                    const name = Object.keys(tech)[0]
+                    if (!tech.htmlcss && Object.values(tech)[0] === true) {
+                        return `<img src='media/${name}.svg' title='${name}' alt='${name}'>`
+                    }
+                })}
             </div>
         </div>
         <a href="${projectBox.projectUrl}" target="_blank">To project >>></a>
     </div>
     </div>
     `
-
-    return box
 }
 
 document.addEventListener('readystatechange', (e) => {
