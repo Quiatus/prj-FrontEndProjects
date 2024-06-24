@@ -7,7 +7,6 @@ const date = new Date()
 let selectedValues = {
     difficulty: 0,
     tech: [
-        {htmlcss: true},
         {js: true}
     ]
 }
@@ -29,24 +28,13 @@ checks.forEach(item => item.addEventListener('change', (e) => {
     display()
 }))
 
-const filterResults = (arr) => {
-   if (JSON.stringify(selectedValues.tech) === JSON.stringify(arr)) return false
-   return true
-}
-
 const display = () => {
     const foot = document.querySelector('#foot')
     const projectGrid = document.querySelector('.projects')
-    let filteredResults = []
-
+ 
     projectGrid.innerHTML = ''
 
-    projectBoxes.map((item) => {
-        console.log(item)
-        if ((selectedValues.difficulty === item.difficulty || selectedValues.difficulty === 0) && filterResults(item.tech)){
-            filteredResults.push(item)
-        }
-    })
+    let filteredResults = projectBoxes.filter((item) => selectedValues.difficulty === item.difficulty || selectedValues.difficulty === 0)
 
     filteredResults.map(item => projectGrid.insertAdjacentHTML('beforeend', constructElement(item)))
 
@@ -73,7 +61,7 @@ const constructElement = (projectBox) => {
                 <img src='media/css.svg' title='css' alt='css'>
                 ${projectBox.tech.map(tech => {
                     const name = Object.keys(tech)[0]
-                    if (!tech.htmlcss && Object.values(tech)[0] === true) {
+                    if (Object.values(tech)[0] === true) {
                         return `<img src='media/${name}.svg' title='${name}' alt='${name}'>`
                     }
                 })}

@@ -6,7 +6,6 @@ export const projectBoxes = [
         body: 'Simple responsive layout to display test results. Uses media queries to resize based on screen width.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -17,7 +16,6 @@ export const projectBoxes = [
         body: 'A box with QR code.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -28,7 +26,6 @@ export const projectBoxes = [
         body: 'Responsive layout using flex boxes.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -39,7 +36,6 @@ export const projectBoxes = [
         body: 'Responsive box with social media links',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -50,7 +46,6 @@ export const projectBoxes = [
         body: 'Blog article preview box.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -61,7 +56,6 @@ export const projectBoxes = [
         body: 'FAQ Page. Each question can be expanded or collapsed.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -72,7 +66,6 @@ export const projectBoxes = [
         body: 'Landing page. Under construction.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -83,7 +76,6 @@ export const projectBoxes = [
         body: 'Product preview card. Responsive layout.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -94,7 +86,6 @@ export const projectBoxes = [
         body: 'Rating card with interactive elements.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -105,7 +96,6 @@ export const projectBoxes = [
         body: 'e-Learning program landing page. Responsive using CSS Grid and Flexbox.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -116,7 +106,6 @@ export const projectBoxes = [
         body: 'NFT preview card. Resizes using clamp function.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -127,7 +116,6 @@ export const projectBoxes = [
         body: 'Equalizer landing page. Uses grid and clamp to resize.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -138,7 +126,6 @@ export const projectBoxes = [
         body: 'Order summary card. Uses media query.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -149,7 +136,6 @@ export const projectBoxes = [
         body: 'Stats preview card component',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -160,7 +146,6 @@ export const projectBoxes = [
         body: 'Preview card. Uses media query for responsive design.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -171,7 +156,6 @@ export const projectBoxes = [
         body: 'Meet landing page. Uses media query and clamp to achieve responsive design.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -182,7 +166,6 @@ export const projectBoxes = [
         body: 'Pod access request landing page. Responsive layout using combination of flex and grid.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -193,7 +176,6 @@ export const projectBoxes = [
         body: 'Profile card. Uses css flexbox.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -204,7 +186,6 @@ export const projectBoxes = [
         body: 'Social proof page. Uses CSS Grid and Flex for responsive layout.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -215,7 +196,6 @@ export const projectBoxes = [
         body: 'Article preview page. Uses CSS Grid and Flex for responsive layout.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -226,7 +206,6 @@ export const projectBoxes = [
         body: '4-card feature section. Uses grid to position the cards.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -237,7 +216,6 @@ export const projectBoxes = [
         body: 'Apparel page. Uses CSS grid to reposition elements based on screen width.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -248,7 +226,6 @@ export const projectBoxes = [
         body: 'Sign-up form. Responsive layout using CSS Flex. Basic form validation.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -259,7 +236,6 @@ export const projectBoxes = [
         body: 'Price component. Responsive layout using CSS grid.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -270,7 +246,6 @@ export const projectBoxes = [
         body: 'Ping coming soon page. Uses combination of CSS grid and flex.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -281,7 +256,6 @@ export const projectBoxes = [
         body: 'Huddle landing page. Responsive layout using CSS Flex.',
         difficulty: 1,
         tech: [
-            {htmlcss: true},
             {js: false}
         ]
     },
@@ -292,7 +266,6 @@ export const projectBoxes = [
         body: 'Newsletter singup page. Uses combination of CSS grid and flex. Simple JS form verification.',
         difficulty: 2,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -303,7 +276,6 @@ export const projectBoxes = [
         body: 'Contact form',
         difficulty: 2,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
@@ -314,7 +286,6 @@ export const projectBoxes = [
         body: 'BMI Calculator',
         difficulty: 2,
         tech: [
-            {htmlcss: true},
             {js: true}
         ]
     },
