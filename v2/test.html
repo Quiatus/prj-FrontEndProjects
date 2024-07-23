@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      line-height: 1;
+    }
+
+    body {
+      background-color: #223;
+      color: #EFF;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 17rem);
+      justify-content: start;
+      align-items: center;
+      background-color: #445;
+      padding: 1rem 2rem;
+      margin: 2rem 0;
+      gap: 2rem;
+
+    }
+
+    nav h1 {
+      font-weight: 100;
+      font-size: 2rem;
+    }
+
+    .form-rad, .form-check {
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+    }
+
+    input[type=radio], input[type=checkbox] {
+      margin-right: .5rem;
+    }
+
+    label:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    .bar {
+      border-left: 1px solid #EFF;
+    }
+
+    .container {
+      max-width: 128rem;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, 40rem); 
+      gap: 2rem;
+    }
+
+    .box {
+      background-color: #445;
+      padding: 1rem;
+      border-radius: .5rem;
+      height: 15rem;
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="nav">
+      <h1>
+        Testing filters
+      </h1>
+      <div class="form-radio">
+        <form action="#" class="form-rad">
+          <input type="radio" class="radb" name="rad" id="rad0" value="0" checked>
+          <label for="rad0">0</label>
+
+          <input type="radio" class="radb" name="rad" id="rad1" value="1">
+          <label for="rad1">1</label>
+
+          <input type="radio" class="radb" name="rad" id="rad2" value="2">
+          <label for="rad2">2</label>
+
+          <input type="radio" class="radb" name="rad" id="rad3" value="3">
+          <label for="rad3">3</label>
+        </form>
+      </div>
+      <div class="form-check">
+        <form action="#" class="form-check">
+          <input type="checkbox" class="checkb" id="check0" value="A" checked>
+          <label for="rad0">A</label>
+
+          <input type="checkbox" class="checkb" id="check1" value="B" checked>
+          <label for="rad1">B</label>
+
+          <input type="checkbox" class="checkb" id="check2" value="C" checked>
+          <label for="rad2">C</label>
+        </form>
+      </div>
+    </nav>
+
+    <div class="container">
+
+    </div>
+  </main>
+
+  <script>
+    const vals = [
+      {
+        d:1,
+        t:['A']
+      },
+      {
+        d:1,
+        t:['B']
+      },
+      {
+        d:1,
+        t:['C']
+      },
+      {
+        d:2,
+        t:['A']
+      },
+      {
+        d:2,
+        t:['B']
+      },
+      {
+        d:2,
+        t:['C']
+      },
+      {
+        d:3,
+        t:['A']
+      },
+      {
+        d:3,
+        t:['A','B']
+      },
+      {
+        d:3,
+        t:['C']
+      }
+    ]
+
+    const cont = document.querySelector('.container')
+    const rad = document.querySelectorAll('.radb')
+    const che = document.querySelectorAll('.checkb')
+
+    document.addEventListener('change', () => {
+      let diff, filtered;
+      let tech = []
+
+      rad.forEach(item => {if (item.checked) diff = item.value})
+      che.forEach(item => {if (item.checked) tech.push(item.value)})
+
+      filtered = vals.filter(item => (+diff === item.d || +diff === 0) && item.t.every(it => tech.includes(it)))
+
+      display(filtered)
+    })
+
+    function display(filtered) {
+      cont.innerHTML = '';
+      filtered.map(item => cont.insertAdjacentHTML('beforeend', markup(item)))
+    }
+
+    function markup(item) {
+      return `<div class="box">${item.d}${item.t}</div>`
+    }
+
+    display(vals)
+
+  </script>
+</body>
+</html>
